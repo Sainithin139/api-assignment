@@ -1,0 +1,18 @@
+$Installation
+git clone <repository_url>
+cd appointment_system
+python appointment_system.py
+$Example
+sys = AppointmentSystem()
+
+sys.aut("Student", "A1")
+sys.aut("Professor", "P1")
+
+sys.set_avail("P1", ["T1", "T2", "T3"])
+print("Available slots for P1:", sys.view_avail("P1"))
+
+sys.book_app("A1", "P1", "T1")
+
+sys.cancel_app("P1", "T1")
+
+print("Appointments for A1:", sys.check_apps("A1"))
